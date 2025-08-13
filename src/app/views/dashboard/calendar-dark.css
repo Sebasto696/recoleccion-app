@@ -1,0 +1,33 @@
+/* Estilos oscuros personalizados para react-calendar */
+.react-calendar {
+  background: #18181b;
+  color: #ededed;
+  border-radius: 0.5rem;
+  border: none;
+}
+.react-calendar__navigation button {
+  color: #ededed;
+  background: transparent;
+}
+.react-calendar__tile {
+  background: transparent;
+  color: #ededed;
+}
+.react-calendar__tile--active,
+.react-calendar__tile--now {
+  background: #3a5f6f;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background: #334155;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+.react-calendar__month-view__days__day--weekend {
+  color: #f87171;
+}
+.react-calendar__month-view__weekdays {
+  color: #a3a3a3;
+}
