@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 import './calendar-dark.css';
+import { useRouter } from "next/navigation";
+
 
 export default function Dashboard() {
     const [usuario, setUsuario] = useState("sebastian");
@@ -16,7 +18,8 @@ export default function Dashboard() {
     }, []);
 
     const handleProgramar = () => {
-        alert("Función para programar recolección 📅");
+        //alert("Función para programar recolección 📅");
+        router.push("/views/recoleccion");
     };
 
     const handleCanjear = () => {
@@ -26,6 +29,8 @@ export default function Dashboard() {
     const handleReporte = () => {
         alert("Reporte generado 📄");
     };
+
+    const router = useRouter();
 
     return (
         <div className="min-h-screen bg-gray-100">

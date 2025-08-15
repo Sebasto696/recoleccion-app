@@ -58,7 +58,7 @@ export default function FormRecoleccion() {
                         <div>
                             <label className="block text-gray-700 mb-1">Frecuencia</label>
                             <select
-                                className="w-full bg-gray-100 border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#3a5f6f]"
+                                className="w-full text-black bg-gray-100 border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#3a5f6f]"
                             >
                                 <option value="">Seleccione...</option>
                                 <option value="1">1 vez por semana</option>
@@ -69,7 +69,7 @@ export default function FormRecoleccion() {
                         <div>
                             <label className="block text-gray-700 mb-1">Modalidad</label>
                             <select
-                                className="w-full bg-gray-100 border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#3a5f6f]"
+                                className="w-full text-black bg-gray-100 border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#3a5f6f]"
                             >
                                 <option value="">Seleccione...</option>
                                 <option value="programada">Programada</option>
