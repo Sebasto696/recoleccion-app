@@ -15,7 +15,7 @@ const SolicitudRecoleccionPage = () => {
     <div className="p-4 bg-gray-100 min-h-screen font-sans">
       {/* Encabezado y barra de búsqueda */}
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-semibold text-gray-800">Solicitud Recoleccion</h1>
+        <h1 className="text-2xl font-semibold text-gray-800">Historial  Recolecciones</h1>
         <div className="relative">
           <input
             type="text"
