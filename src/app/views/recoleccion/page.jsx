@@ -3,16 +3,16 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function FormRecoleccion() {
-    // 1. Añadimos un estado para los kilos
+    //Añadimos un estado para los kilos
     const [tipoResiduo, setTipoResiduo] = useState("");
     const [kilosInorganicos, setKilosInorganicos] = useState("");
     const router = useRouter();
 
-    // 2. Creamos la función para manejar el envío del formulario
+    //Creamos la función para manejar el envío del formulario
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // 3. Verificamos que se haya seleccionado un tipo de residuo
+        //Verificamos que se haya seleccionado un tipo de residuo
         if (!tipoResiduo) {
             alert("⚠️ Por favor, seleccione un tipo de residuo.");
             return;
@@ -42,7 +42,7 @@ export default function FormRecoleccion() {
         }
 
         try {
-            // 4. Hacemos la llamada a la API con el token en el encabezado
+            //Hacemos la llamada a la API con el token en el encabezado
             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/solicitudes`, {
                 method: "POST",
                 headers: {
@@ -72,7 +72,7 @@ export default function FormRecoleccion() {
                 <span className="cursor-pointer hover:underline" onClick={() => router.push('/views/dashboard')}>Inicio</span> / <span className="text-gray-700">Formulario Solicitud Recolección</span>
             </p>
 
-            {/* 5. Agregamos el handler de envío al formulario */}
+            {/*Agregamos el handler de envío al formulario */}
             <form className="bg-white rounded-lg p-6 shadow-sm space-y-6" onSubmit={handleSubmit}>
                 {/* Tipo de Residuo */}
                 <div>
