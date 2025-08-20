@@ -120,6 +120,10 @@ export default function FormRecoleccion() {
       </p>
 
       <form className="bg-white rounded-lg p-6 shadow-sm space-y-6" onSubmit={handleSubmit}>
+        <div className="bg-yellow-100 p-2 rounded text-xs text-gray-700">
+          <strong>DEBUG:</strong> tipoResiduo = "{tipoResiduo}" | Mostrar kilos: {String(tipoResiduo === "Inorgánico")}
+        </div>
+
         <div>
           <label className="block text-gray-700 mb-1">Tipo de Residuo</label>
           <select
@@ -130,9 +134,15 @@ export default function FormRecoleccion() {
             <option value="">Seleccione...</option>
             <option value="Orgánico">Orgánico</option>
             <option value="Inorgánico">Inorgánico Reciclable</option>
-            <option value="Peligroso">Peligroso</option>
+            <option value="peligroso">Peligroso</option>
           </select>
         </div>
+
+
+        {tipoResiduo === "Inorgánico" && (
+          <div className="bg-green-100 p-2 rounded text-xs text-green-700">
+          </div>
+        )}
 
         {tipoResiduo === "Inorgánico" && (
           <div>

@@ -29,8 +29,6 @@ export default function LoginPage() {
 
             if (response.ok) {
                 const data = await response.json();
-                
-                // Guardar el token
                 localStorage.setItem("token", data.token);
                 
                 // 🆕 Guardar el nombre del usuario para el dashboard
