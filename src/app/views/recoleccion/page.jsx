@@ -21,7 +21,6 @@ export default function FormRecoleccion() {
         }
 
         const data = await response.json();
-        console.log("📥 Localidades recibidas (crudas):", data);
 
         const normalizadas = (Array.isArray(data) ? data : []).map((item, idx) => {
           if (typeof item === "string") {
@@ -38,8 +37,6 @@ export default function FormRecoleccion() {
           }
           return { id: idx + 1, nombre: String(item) };
         });
-
-        console.log("✅ Localidades normalizadas:", normalizadas);
         setLocalidades(normalizadas);
       } catch (error) {
         console.error("Error de conexión al cargar localidades:", error);
@@ -120,10 +117,6 @@ export default function FormRecoleccion() {
       </p>
 
       <form className="bg-white rounded-lg p-6 shadow-sm space-y-6" onSubmit={handleSubmit}>
-        <div className="bg-yellow-100 p-2 rounded text-xs text-gray-700">
-          <strong>DEBUG:</strong> tipoResiduo = "{tipoResiduo}" | Mostrar kilos: {String(tipoResiduo === "Inorgánico")}
-        </div>
-
         <div>
           <label className="block text-gray-700 mb-1">Tipo de Residuo</label>
           <select
@@ -134,15 +127,9 @@ export default function FormRecoleccion() {
             <option value="">Seleccione...</option>
             <option value="Orgánico">Orgánico</option>
             <option value="Inorgánico">Inorgánico Reciclable</option>
-            <option value="peligroso">Peligroso</option>
+            <option value="Peligroso">Peligroso</option>
           </select>
         </div>
-
-
-        {tipoResiduo === "Inorgánico" && (
-          <div className="bg-green-100 p-2 rounded text-xs text-green-700">
-          </div>
-        )}
 
         {tipoResiduo === "Inorgánico" && (
           <div>
@@ -198,7 +185,7 @@ export default function FormRecoleccion() {
         </div>
 
         {/* Campos condicionales - Solo mensajes informativos */}
-        {tipoResiduo === "peligroso" && (
+        {tipoResiduo === "Peligroso" && (
           <p className="text-sm text-gray-500">
             La recolección de residuos peligrosos se realiza <b>1 vez al mes</b>.
           </p>
