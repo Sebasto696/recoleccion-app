@@ -61,7 +61,7 @@ export default function RegisterPage() {
                             placeholder="Nombre"
                             value={nombre}
                             onChange={(e) => setNombre(e.target.value)}
-                            className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
+                            className="mt-1 w-full border border-gray-300 text-black rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
                         />
                     </div>
 
@@ -72,7 +72,7 @@ export default function RegisterPage() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Email"
-                            className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
+                            className="mt-1 w-full border border-gray-300 text-black rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
                         />
                     </div>
 
@@ -83,7 +83,7 @@ export default function RegisterPage() {
                             placeholder="Teléfono"
                             value={telefono}
                             onChange={(e) => setTelefono(e.target.value)}
-                            className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
+                            className="mt-1 w-full border border-gray-300 text-black rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
                         />
                     </div>
 
@@ -94,7 +94,7 @@ export default function RegisterPage() {
                             value={contrasena}
                             onChange={(e) => setContrasena(e.target.value)}
                             placeholder="Contraseña"
-                            className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
+                            className="mt-1 w-full border border-gray-300 text-black rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
                         />
                     </div>
 
@@ -105,7 +105,7 @@ export default function RegisterPage() {
                             value={confirmarContrasena}
                             onChange={(e) => setConfirmarContrasena(e.target.value)}
                             placeholder="Confirmar contraseña"
-                            className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
+                            className="mt-1 w-full border border-gray-300 text-black rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
                         />
                     </div>
 

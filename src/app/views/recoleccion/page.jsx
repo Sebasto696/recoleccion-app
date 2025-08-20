@@ -130,7 +130,7 @@ export default function FormRecoleccion() {
             <option value="">Seleccione...</option>
             <option value="Orgánico">Orgánico</option>
             <option value="Inorgánico">Inorgánico Reciclable</option>
-            <option value="peligroso">Peligroso</option>
+            <option value="Peligroso">Peligroso</option>
           </select>
         </div>
 
