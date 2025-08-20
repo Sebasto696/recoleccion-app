@@ -152,7 +152,6 @@ export default function FormRecoleccion() {
               step="0.1"
               value={kilosInorganicos}
               onChange={(e) => {
-                console.log("🔍 DEBUG - Kilos ingresados:", e.target.value);
                 setKilosInorganicos(e.target.value);
               }}
               placeholder="Ingrese los kilos"
