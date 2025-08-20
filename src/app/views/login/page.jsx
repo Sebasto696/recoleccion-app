@@ -29,8 +29,6 @@ export default function LoginPage() {
 
             if (response.ok) {
                 const data = await response.json();
-                
-                // Guardar el token
                 localStorage.setItem("token", data.token);
                 
                 // 🆕 Guardar el nombre del usuario para el dashboard
@@ -65,7 +63,7 @@ export default function LoginPage() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Email"
-                            className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
+                            className="mt-1 text-black  w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
                         />
                     </div>
 
@@ -78,7 +76,7 @@ export default function LoginPage() {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder="Contraseña"
-                            className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
+                            className="mt-1 text-black w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200 placeholder:text-gray-300"
                         />
                     </div>
 
