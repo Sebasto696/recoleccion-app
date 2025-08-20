@@ -5,20 +5,18 @@ import 'react-calendar/dist/Calendar.css';
 import './calendar-dark.css';
 import { useRouter } from "next/navigation";
 
-
 export default function Dashboard() {
     const [usuario, setUsuario] = useState("sebastian");
     const [puntos, setPuntos] = useState(150);
     const [date, setDate] = useState(new Date());
+    const router = useRouter();
 
     useEffect(() => {
-        // Aquí podrías traer el nombre real del usuario desde una API o localStorage
         const nombreGuardado = localStorage.getItem("nombreUsuario");
         if (nombreGuardado) setUsuario(nombreGuardado);
     }, []);
 
     const handleProgramar = () => {
-        //alert("Función para programar recolección 📅");
         router.push("/views/recoleccion");
     };
 
@@ -30,23 +28,44 @@ export default function Dashboard() {
         alert("Reporte generado 📄");
     };
 
-    const router = useRouter();
+    // 🆕 Función para cerrar sesión
+    const handleCerrarSesion = () => {
+        // Confirmación antes de cerrar sesión
+        if (window.confirm("¿Estás seguro que deseas cerrar sesión?")) {
+            // Eliminar el token
+            localStorage.removeItem("token");
+            localStorage.removeItem("nombreUsuario");
+            
+            // Mostrar mensaje de confirmación
+            alert("✅ Sesión cerrada correctamente");
+            
+            // Redirigir al login
+            router.push("/views/login");
+        }
+    };
 
     return (
         <div className="min-h-screen bg-gray-100">
-            {/* Barra superior */}
-            <header className="flex items-center p-4 bg-gray-200 shadow">
-                <button className="text-gray-700 text-2xl">☰</button>
-                <h1 className="text-3xl  pl-5 font-bold text-black">Bienvenido, {usuario}</h1>
+            {/* Barra superior con botón de cerrar sesión */}
+            <header className="flex items-center justify-between p-4 bg-gray-200 shadow">
+                {/* Lado izquierdo: menú hamburguesa y saludo */}
+                <div className="flex items-center">
+                    <button className="text-gray-700 text-2xl">☰</button>
+                    <h1 className="text-3xl pl-5 font-bold text-black">Bienvenido, {usuario}</h1>
+                </div>
+                
+                {/* Lado derecho: botón de cerrar sesión */}
+                <button
+                    onClick={handleCerrarSesion}
+                    className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors duration-200 font-medium"
+                    title="Cerrar sesión"
+                >
+                    🚪 Cerrar Sesión
+                </button>
             </header>
 
             {/* Contenido */}
             <main className="p-6">
-                {/* Botón calendario */}
-                <div className="flex justify-center mb-6">
-
-                </div>
-
                 {/* Secciones */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Calendario */}
